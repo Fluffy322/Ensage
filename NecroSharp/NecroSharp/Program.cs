@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ensage;
+using SharpDX;
+using Ensage.Common;
 
 namespace NecroSharp
 {
@@ -10,7 +13,7 @@ namespace NecroSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World2");
+            Game.PrintMessage("Cookies", 0);
         }
     }
 }
