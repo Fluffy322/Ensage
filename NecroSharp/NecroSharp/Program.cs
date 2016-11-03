@@ -12,8 +12,18 @@ namespace NecroSharp
     class Program
     {
         static void Main(string[] args)
+
         {
-            Game.PrintMessage("Cookies", 0);
+            Game.PrintMessage("Loaded", 0);
+
+            Game.OnUpdate += Game_OnUpdate;
+
+
+        }
+
+        private static void Game_OnUpdate(EventArgs args)
+        {
+            Game.PrintMessage("onUpdateFired", 0);
         }
     }
 }
