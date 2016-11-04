@@ -44,7 +44,7 @@ namespace BountyHunter_AutoTrack
             else
                 IsStealthed = false;
                 
-            if (me == null || !me.IsAlive || !Menu.Item("AutoTrack").GetValue<bool>())
+            if (me == null || !me.IsAlive || !Game.IsInGame|| !Menu.Item("AutoTrack").GetValue<bool>())
                 return;
             if (IsStealthed && Menu.Item("dontCancelStealth").GetValue<bool>())
                 return;
