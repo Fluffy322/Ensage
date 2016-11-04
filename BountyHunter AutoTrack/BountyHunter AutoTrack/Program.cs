@@ -37,6 +37,9 @@ namespace BountyHunter_AutoTrack
 
         private static void Game_OnUpdate(EventArgs args)
         {
+            if (!Game.IsInGame)
+                return;
+            
             var me = ObjectMgr.LocalHero;
 
             if (me.Modifiers.FirstOrDefault(e => e.Name == "modifier_bounty_hunter_wind_walk") != null)
@@ -44,7 +47,7 @@ namespace BountyHunter_AutoTrack
             else
                 IsStealthed = false;
                 
-            if (me == null || !me.IsAlive || !Game.IsInGame|| !Menu.Item("AutoTrack").GetValue<bool>())
+            if (me == null || !me.IsAlive || !Menu.Item("AutoTrack").GetValue<bool>())
                 return;
             if (IsStealthed && Menu.Item("dontCancelStealth").GetValue<bool>())
                 return;
