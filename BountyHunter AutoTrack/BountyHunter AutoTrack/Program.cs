@@ -71,13 +71,6 @@ namespace BountyHunter_AutoTrack
                 {
                     rSpell.UseAbility(enemies[0]);
                     Utils.Sleep(700, me.Handle + "track");
-                    Game.PrintMessage(enemies[0].Name + " tracked", 0);
-                    foreach (var item in enemies[0].Modifiers)
-                    {
-                        Game.PrintMessage(item.Name, 0);
-                    }
-
-
                 }
             }
 
